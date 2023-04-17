@@ -1,8 +1,7 @@
-""" Модуль для дескрипторов с проверками типов и значений"""
+"""Дескриптор с проверками типов и значений"""
 
 
 class Integer:
-    """Класс целых чисел"""
     def __init__(self, val=None, field_name='int'):
         self.val = val
         self.field_name = field_name
@@ -18,7 +17,6 @@ class Integer:
 
 
 class String:
-    """Класс строк"""
     def __init__(self, name=None, field_name='str'):
         self.name = name
         self.field_name = field_name
@@ -34,7 +32,6 @@ class String:
 
 
 class PositiveInteger:
-    """Класс положительных целых чисел"""
     def __init__(self, val=None, field_name='positive_int'):
         self.val = val
         self.field_name = field_name
@@ -50,7 +47,6 @@ class PositiveInteger:
 
 
 class EvenInteger:
-    """Класс четных чисел"""
     def __init__(self, val=None, field_name='even_int'):
         self.val = val
         self.field_name = field_name

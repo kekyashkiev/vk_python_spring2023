@@ -7,7 +7,6 @@ from descriptors import Integer, String, PositiveInteger, EvenInteger
 
 
 class Data:
-    """Класс для проверки дескрипторов"""
     num = Integer()
     name = String()
     price = PositiveInteger()
@@ -21,7 +20,6 @@ class Data:
 
 
 class DescriptorsTestClass(unittest.TestCase):
-    """Класс тестов дескрипторов"""
 
     def test_correct(self):
         """ Правильное  """
@@ -39,7 +37,8 @@ class DescriptorsTestClass(unittest.TestCase):
         self.assertEqual(test_data.price, 1200)
         self.assertEqual(test_data.amount, 6)
 
-        correct_dict = {'int': -28, 'str': 'Kolya', 'positive_int': 1200, 'even_int': 6}
+        correct_dict = {'int': -28, 'str': 'Kolya',
+                        'positive_int': 1200, 'even_int': 6}
         self.assertEqual(test_data.__dict__, correct_dict)
 
         test_data.num = -35
@@ -47,7 +46,6 @@ class DescriptorsTestClass(unittest.TestCase):
         self.assertEqual(test_data.__dict__, correct_dict)
 
     def test_incorrect(self):
-        """ Неправильное использование дескрипторов """
         test_data = Data()
         test_data.num = -28
         test_data.price = 1200
