@@ -64,8 +64,8 @@ class LRUCacheTestClass(unittest.TestCase):
         self.assertEqual(cashe.get("key_4"), "val_4")
 
     def test_new_value(self):
-        """  Метод, тестирующий работу LRUCache
-        set нового значения существующему ключу key_2"""
+        """  Работа LRUCache set
+        нового значения существующему ключу key_2"""
 
         cashe = LRUCache(3)
         cashe.set("key_1", "val_1")
